@@ -39,14 +39,7 @@
 								</tr>
 							</thead>
 					
-							
-							
-
-
-
-
-
-
+		
 							@foreach(Cart::content()  as $item )
 							<tbody>
 								<tr class="table-body-row">

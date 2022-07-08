@@ -38,7 +38,7 @@
 								<strong>Cantidad a llevar :</strong>
 								<input type="number" placeholder="0">
 							</form>
-							<a href="" class="cart-btn" wire::click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fas fa-shopping-cart"> </i>Agregar al carrito</a>
+							<a href="" class="cart-btn"wire::click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fas fa-shopping-cart"> </i>Agregar al carrito</a>
 							<p><strong>Categoria: </strong>Aseo</p>
 							<p><strong>Fecha de vencimiento: </strong>12/09/2022</p>
 						</div>
@@ -67,16 +67,16 @@
                     
 					<div class="single-product-item">
 						<div class="product-image">
-						<a href="{{route('producto.details',['slug'=>$product->slug])}}"><img src="assets/img/Arroz supremo.webp/{{$product->image}}" alt="{{$product->name}}"></a>
-							<!--<a href="{{route('producto.details',['slug'=>$product->slug])}}"><img src="{{asset('assets/img')}}/{{$p_product->image}}" alt="{{$p_product->name}}"></a>-->
+							<a href="{{route('producto.details',['slug'=>$p_product->slug])}}">
+								<img src="{{asset('assets/img')}}/{{$p_product->image}}" alt="{{$p_product->name}}"></a>
 						</div>
 						<h3>{{$p_product->name}}</h3>
 						<p class="product-price"><span></span>${{$p_product->regular_price}} </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Agregar al carrito</i></a>
+						<a href="#"wire::click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"class="cart-btn"><i class="fas fa-shopping-cart"></i> Agregar al carrito</i></a>
 					</div>
                     
 				</div>
-                @endforeach
+            @endforeach
 				
 			</div>
 		</div>
